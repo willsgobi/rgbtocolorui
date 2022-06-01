@@ -1,0 +1,108 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: .3s;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    min-height: 600px;
+}
+
+.centerContent > h3 {
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 30px 0;
+}
+
+.centerContent > p {
+    font-weight: 200;
+}
+
+.inputs {
+    display: flex;
+}
+
+.contentInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px;
+    margin-top: 5px;
+}
+
+.contentInput > em {
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.inputRgb {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 5px 12px;
+    outline: none;
+    transition: .5s;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.uiColors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.uiColors > p {
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.copy {    
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    color: #111;
+    background-color: #c5f7dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3ac277;
+    border-radius: 3px;
+    transition: .2s;
+    animation: shows linear .3s forwards;
+}
+
+.copy::after{
+    content: 'Copiado com sucesso!';
+}
+
+.code {
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.code:hover{
+    transform: scale(1.05);
+}
+
+@keyframes shows {
+    from {
+        top: 0;
+    } to {
+        top: 20px;
+    }
+}
