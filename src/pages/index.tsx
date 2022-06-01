@@ -12,17 +12,20 @@ export default function Home() {
   const [copy, setCopy] = useState<boolean>(false)
 
   let code = `<color key="backgroundColor" red="${uiColorRed}" green="${uiColorGreen}" blue="${uiColorBlue}" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>`;
+  let regex = /\d+/g
 
   useEffect(() => {
-    if(red > 255) {
+  
+
+    if(red > 255 || red === NaN) {
       setRed(255)
     }
 
-    if(green > 255) {
+    if(green > 255 || green === NaN) {
       setGreen(255)
     }
 
-    if(blue > 255) {
+    if(blue > 255 || green === NaN) {
       setBlue(255)
     }
 
